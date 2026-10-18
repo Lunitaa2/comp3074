@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:padding="20dp">
+
+    <!-- 1. App Logo -->
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:contentDescription="App Logo"
+        android:src="@drawable/app_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textOutput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!-- 2. Output Label (Initial value is 0) -->
+    <TextView
+        android:id="@+id/textOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="0"
+        android:textSize="56sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        app:layout_constraintTop_toBottomOf="@id/imageLogo"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMinus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 4. Subtract Button (-) Dark Green -->
+    <Button
+        android:id="@+id/buttonMinus"
+        android:layout_width="120dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="28dp"
+        android:text="-"
+        android:textSize="32sp"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/btn_green_operator"
+        app:layout_constraintTop_toBottomOf="@id/textOutput"
+        app:layout_constraintBottom_toTopOf="@+id/buttonReset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPlus"
+        app:layout_constraintHorizontal_chainStyle="spread" />
+
+    <!-- 3. Add Button (+) Dark Green -->
+    <Button
+        android:id="@+id/buttonPlus"
+        android:layout_width="120dp"
+        android:layout_height="64dp"
+        android:text="+"
+        android:textSize="32sp"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/btn_green_operator"
+        app:layout_constraintTop_toTopOf="@id/buttonMinus"
+        app:layout_constraintBottom_toBottomOf="@id/buttonMinus"
+        app:layout_constraintStart_toEndOf="@+id/buttonMinus"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 5. Reset Button (Pink / Magenta) -->
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="120dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="20dp"
+        android:text="Reset"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/btn_pink_reset"
+        app:layout_constraintTop_toBottomOf="@id/buttonMinus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonStep"
+        app:layout_constraintHorizontal_chainStyle="spread" />
+
+    <!-- 6. Step Button (Bright Lime Green) -->
+    <Button
+        android:id="@+id/buttonStep"
+        android:layout_width="120dp"
+        android:layout_height="64dp"
+        android:text="Step"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/btn_lime_step"
+        app:layout_constraintTop_toTopOf="@id/buttonReset"
+        app:layout_constraintBottom_toBottomOf="@id/buttonReset"
+        app:layout_constraintStart_toEndOf="@+id/buttonReset"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

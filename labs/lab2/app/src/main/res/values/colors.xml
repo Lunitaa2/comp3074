@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Lab 2 Custom Colors -->
+    <color name="app_background">#F5F5F7</color>
+    <color name="btn_green_operator">#2E7D32</color> <!-- Dark Green for - and + -->
+    <color name="btn_pink_reset">#E91E63</color>      <!-- Magenta / Pink for Reset -->
+    <color name="btn_lime_step">#00C853</color>       <!-- Bright Green for Step -->
+</resources>
